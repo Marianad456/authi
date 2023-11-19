@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+			background-color:#333;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #ccc;
+			background-color:white;
+			
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 380px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+		#toolbar {
+            background-color: black;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+		#navigation{
+		 display: flex;
+		 
+		}
+		#navigation a{
+		text-decoration: none;
+        color: #fff;
+        margin-left: 140px;
+		font-family:"Times New Roman", Times, serif;
+		}
+		#header{
+		 font-weight: bold;
+		 font-size:30px;
+		 font-family:Monospace;
+		 
+		}
+		#header a {
+        text-decoration: none; 
+        color: white;          
+          }
+
+        #header a:visited {
+        color: white;          
+         }
+		 .logo{
+		height:50px;
+		width:50px;
+		}
+    </style>
+</head>
+<body>
+<div id="toolbar">
+<img class = "logo" src="https://raw.githubusercontent.com/Marianad456/authi.github.io/main/image/logo.jpeg" alt="logo">
+<div id= "header"><a href = "main.html">Architek</a></div>
+<div id="navigation">
+<a href= "About.html">About</a>
+<a href= "Project.html">Projects</a>
+<a href= "ourteam.html">Our team</a>
+<a href = "signin.html">Sign In</a>
+<a href = "signup.html">Sign Up</a>
+</div>
+</div>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            
+            if (username === "user" && password === "password") {
+                alert("Login successful!");
+            } else {
+                alert("Login failed. Please check your credentials.");
+				
+				window.location.href = 'main.html';
+            }
+        });
+    </script>
+</body>
+</html>
